@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=EUC-KR" %> 
+<%@ page contentType="text/html; charset=euc-kr" %> 
 <% request.setCharacterEncoding("euc-kr"); %>
 <%
 try {

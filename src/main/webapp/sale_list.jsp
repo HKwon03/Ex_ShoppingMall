@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=EUC-KR" %> 
+<%@ page contentType="text/html; charset=euc-kr" %> 
 <%@ page language="java" import="java.sql.*,java.text.*" %> 
 <% request.setCharacterEncoding("euc-kr"); %>
 <HTML>
@@ -13,7 +13,7 @@
 <BODY>
 
 <!-- DB 연결 설정 --> 
-<%@ include file = "dbconn_mysql.jsp" %>
+<%@ include file = "dbconn_mssql.jsp" %>
 
 
 <P align=center>

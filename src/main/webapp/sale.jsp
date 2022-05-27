@@ -1,14 +1,14 @@
-<%@ page contentType="text/html; charset=EUC-KR" %> 
+<%@ page contentType="text/html; charset=euc-kr" %> 
 <% request.setCharacterEncoding("euc-kr"); %>
 <%
 try {
 
  session=request.getSession();
- String id = request.getParameter("id"); 
- int qty = Integer.parseInt(request.getParameter("quantity")); 
+ String id = request.getParameter("id"); 	// 제품 고유번호
+ int qty = Integer.parseInt(request.getParameter("quantity")); // 제품 수량
  
- String ca="";
- String pn="";
+ String ca="";	// 카테고리 정보
+ String pn="";	// 상품명
  
  if (request.getParameter("cat") != null) 
   if( !(request.getParameter("cat").equals("")) )
@@ -27,7 +27,9 @@ try {
   }
  }
  
- session.putValue(id, new Integer(qty));   
+ session.putValue(id, new Integer(qty));   	//세션 변수에 id(제품 고유번호), qty(구매 갯수)
+ 
+ 
  out.println("바구니에 넣었습니다.");
  out.print("[<A href=\"shop_list.jsp?go="+ request.getParameter("go"));
  out.print("&cat="+ ca +"&pname="+pn+"\">계속 쇼핑하기</A>]");
