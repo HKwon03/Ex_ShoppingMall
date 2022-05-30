@@ -12,10 +12,9 @@
 <BODY>
 
 <!-- DB 연결 설정 --> 
+<%@ include file = "dbconn_mysql.jsp" %>
 
 
-
-<%@ include file = "dbconn_mssql.jsp" %>
 
 
 <%
